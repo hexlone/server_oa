@@ -12,6 +12,7 @@ public interface MainMapper {
 
     @Select("select * from oa.news")
     public List<NewsEntity> getAllNews();
+
     @Select("select * from oa.announcement")
     public List<AnnoEntity> getAnno();
 

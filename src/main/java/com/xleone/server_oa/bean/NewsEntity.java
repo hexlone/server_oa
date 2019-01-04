@@ -8,6 +8,15 @@ public class NewsEntity implements Serializable {
     private String news_title;
     private String news_content;
     private String news_time;
+    private String news_icon;
+
+    public String getNews_icon() {
+        return news_icon;
+    }
+
+    public void setNews_icon(String news_icon) {
+        this.news_icon = news_icon;
+    }
 
     public String getNews_time() {
         return news_time;

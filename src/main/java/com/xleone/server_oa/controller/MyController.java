@@ -30,11 +30,16 @@ public class MyController {
         return map;
     }
 
-    @GetMapping("/announcement")
-    public Map<String, List<AnnoEntity>> getAnno() {
+    @GetMapping("/inform")
+    public Inform getAnno() {
         Map<String, List<AnnoEntity>> map = new HashMap<>();
-        map.put("announcement", mainMapper.getAnno());
-        return map;
+        //map.put("announcement", mainMapper.getAnno());
+        Map<String, List<NoticeEntity>> map1 = new HashMap<>();
+        //map1.put("notice", mainMapper.getNotice());
+        Inform inform = new Inform();
+        inform.setAnnouncement(mainMapper.getAnno());
+        inform.setNotice(mainMapper.getNotice());
+        return inform;
     }
     @GetMapping("/notice")
     public Map<String, List<NoticeEntity>> getNotice() {
